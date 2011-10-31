@@ -1,0 +1,27 @@
+<div><?php echo $this->_('Base URI:') ?><input type="text" id="uribase" value="initme" style="width:80%;"></div>
+<div><?php echo $this->_('Data Range:') ?><span id="csvimportDatarange"></span></div>
+<div><?php echo $this->_('Attributes:') ?>
+<table id="csvimport-attributes">
+    <tr>
+        <th><?php echo $this->_('Attribute Name') ?></th>
+    </tr>
+</table>
+</div>
+<div><?php echo $this->_('Dimensions:') ?>
+
+<table id="csvimport-dimensions">
+    <tr>
+        <th><?php echo $this->_('Dimension Name') ?></th>
+    </tr>
+</table>
+</div>
+
+<div><?php echo $this->_('List Tables:') ?><span id="csvimportDatarange"></span><br>
+<?php
+$table_array = $this->tables;
+for($c = 0; $c<count($table_array); $c++)
+{
+	echo $table_array[$c][0]."<br>";
+}
+?>
+</div>
